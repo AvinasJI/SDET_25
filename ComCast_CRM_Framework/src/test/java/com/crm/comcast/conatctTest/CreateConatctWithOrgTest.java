@@ -66,9 +66,7 @@ public class CreateConatctWithOrgTest{
 
 		    String orgName = eLib.getDataFromExcel("contact", 4, 2) + randomNum;
 		    String conactName = eLib.getDataFromExcel("contact", 4, 3) + randomNum;
-	
-		   
-		 
+
          
          /* launch the Browser */ 
          WebDriver driver = null;
@@ -86,15 +84,23 @@ public class CreateConatctWithOrgTest{
         /* step 2 :  login */ 
         Login lp = new Login(driver);
         lp.loginToApp(URL, USERNAME, PASSWORD);
+        
+        
    /* step 2 :  navigate to Org Page*/ 
         HomePage hp = new HomePage(driver);
-        hp.getOrganizationLink().click();             
+        hp.getOrganizationLink().click();     
+        
+        
    /* step 3 : navigate to create Org page */  
         OrganizationPage op = new OrganizationPage(driver);
         op.getCreateOrganizationIMG().click();
+        
+        
    /* step 3 : create a new Org */   
         CreateOrganizationPage cop = new CreateOrganizationPage(driver);
         cop.createOrganization(orgName);
+        
+        
    /* step 4 : verify */ 
         OrganizationInfoPage oip = new OrganizationInfoPage(driver);
         wLib.waitForElemnetToBeClickAble(driver, oip.getOrganizationInfo());
@@ -102,6 +108,7 @@ public class CreateConatctWithOrgTest{
          /* step 5 :  navigate to CREATE  Coantct Page*/ 
         hp.getContactLink().click();
          
+        
         /* step 6 :  navigate to CREATE  Contact Page*/ 
         Contacts cp = new Contacts(driver);
         cp.getCreateNewConatctIMG().click();

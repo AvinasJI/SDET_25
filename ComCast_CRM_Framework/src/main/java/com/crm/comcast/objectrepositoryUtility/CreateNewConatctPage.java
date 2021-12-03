@@ -24,6 +24,7 @@ public class CreateNewConatctPage extends WebDriverUtility{
 	}
 
 	
+	
 	@FindBy(name = "lastname")
 	private WebElement lastNAmeTxt;
 
@@ -79,17 +80,7 @@ public class CreateNewConatctPage extends WebDriverUtility{
 		op.getSearchTF().sendKeys(orgName);
 		op.getSearchBtn().click();
 		WebElement wb = driver.findElement(By.xpath("//a[text()='"+orgName+"']"));
-		int count = 0;
-		while(count<20) {
-			try {
 			    wb.click();
-			    break;
-			}catch (Exception e) {
-				 count++;
-				 Thread.sleep(100);
-			}
-		}
-		
 		swithToWindow(driver, "Contacts");
 		saveBtn.click();
 	}
