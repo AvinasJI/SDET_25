@@ -34,4 +34,10 @@ public class JavaUtlity {
 		return date_YYYYMMDD;
 	}
 	
+	public String getDateAndTime() {
+		Date dateObj = new Date();
+		String dateFormat = dateObj.toString().replace(":", "_").replace(" ", "_");
+		  return dateFormat;
+	}
+	
 }

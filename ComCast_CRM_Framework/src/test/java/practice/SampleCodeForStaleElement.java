@@ -13,14 +13,17 @@ public class SampleCodeForStaleElement {
 
 	public static void main(String[] args) throws Throwable {
 
+		String username = "admin";
+		String password  = "manager";
 		
 		WebDriver driver = new FirefoxDriver();
-		
+		         driver.get("http://localhost:8888");
+		         
+		         driver.findElement(By.name("user_name")).sendKeys(username);
+		         driver.findElement(By.name("user_password")).sendKeys(password);
+		         driver.findElement(By.id("submitButton")).click();
 	
-			Login lp =  new Login(driver);
-		
-	        lp.loginToApp("http://localhost:8888", "admin", "manager");
-
+	       
 
 	}
 

@@ -26,7 +26,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -40,7 +40,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Suite" class="navigator-link">
-              <span class="suite-name border-passed">Suite</span>
+              <span class="suite-name border-failed">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -51,12 +51,12 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Suite" class="navigator-link ">
-                    <span>D:\wdwd\ComCast_CRM_Framework\testng_crossBrowser_Parallel2.xml</span>
+                    <span>D:\wdwd\ComCast_CRM_Framework\testng_Full_RegressionSuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
                   <a href="#" panel-name="testlist-Suite" class="navigator-link ">
-                    <span class="test-stats">2 tests</span>
+                    <span class="test-stats">1 test</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -93,7 +93,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">10 methods,   10 passed</span>
+                    <span class="method-stats">5 methods, 1 failed,   4 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Suite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.crm.comcast.conatctTest.CreateContactTest" class="method navigator-link" hash-for-method="createConatctWithOrgTest">createConatctWithOrgTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -104,21 +118,6 @@
                     <div class="method-list-content passed suite-Suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="com.crm.comcast.conatctTest.CreateContactTest" class="method navigator-link" hash-for-method="createConatctWithOrgTest">createConatctWithOrgTest</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="com.crm.comcast.conatctTest.CreateContactTest" class="method navigator-link" hash-for-method="createConatctWithOrgTest">createConatctWithOrgTest</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="com.crm.comcast.conatctTest.CreateContactTest" class="method navigator-link" hash-for-method="createContactWithLastNameTest">createContactWithLastNameTest</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="com.crm.comcast.conatctTest.CreateContactTest" class="method navigator-link" hash-for-method="createContactWithLastNameTest">createContactWithLastNameTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
@@ -129,22 +128,7 @@
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="com.crm.comcast.conatctTest.CreateContactTest" class="method navigator-link" hash-for-method="createContact_Support_DateTest">createContact_Support_DateTest</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="com.crm.comcast.organaizationtest.CreateOrganizationTest" class="method navigator-link" hash-for-method="createOrganizationTest">createOrganizationTest</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="com.crm.comcast.organaizationtest.CreateOrganizationTest" class="method navigator-link" hash-for-method="createOrganizationTest">createOrganizationTest</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="com.crm.comcast.organaizationtest.CreateOrganizationTest" class="method navigator-link" hash-for-method="createOrganization_With_Industries_And_Type_Test">createOrganization_With_Industries_And_Type_Test</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -164,6 +148,48 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
+          <div class="suite-Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.crm.comcast.conatctTest.CreateContactTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="createConatctWithOrgTest">
+                  </a> <!-- createConatctWithOrgTest -->
+                  <span class="method-name">createConatctWithOrgTest</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;*[name=&apos;accountname&apos;]&quot;}
+  (Session info: chrome=96.0.4664.93)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-8S455D7&apos;, ip: &apos;172.16.16.255&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;15.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 96.0.4664.93, chrome: {chromedriverVersion: 95.0.4638.17 (a9d0719444d4b..., userDataDir: C:\Users\Deepak\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:56138}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: b88250e04ad854bd1c5c677043936716
+*** Element info: {Using=name, value=accountname}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByName(RemoteWebDriver.java:404)
+	at org.openqa.selenium.By$ByName.findElement(By.java:284)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy16.sendKeys(Unknown Source)
+	at com.crm.comcast.objectrepositoryUtility.CreateOrganizationPage.createOrganization(CreateOrganizationPage.java:53)
+	at com.crm.comcast.conatctTest.CreateContactTest.createConatctWithOrgTest(CreateContactTest.java:94)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 32 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-failed -->
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -175,20 +201,6 @@
                   <a name="createOrganizationTest">
                   </a> <!-- createOrganizationTest -->
                   <span class="method-name">createOrganizationTest</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="createOrganizationTest">
-                  </a> <!-- createOrganizationTest -->
-                  <span class="method-name">createOrganizationTest</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="createOrganization_With_Industries_And_Type_Test">
-                  </a> <!-- createOrganization_With_Industries_And_Type_Test -->
-                  <span class="method-name">createOrganization_With_Industries_And_Type_Test</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -208,37 +220,9 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="createConatctWithOrgTest">
-                  </a> <!-- createConatctWithOrgTest -->
-                  <span class="method-name">createConatctWithOrgTest</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="createConatctWithOrgTest">
-                  </a> <!-- createConatctWithOrgTest -->
-                  <span class="method-name">createConatctWithOrgTest</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
                   <a name="createContactWithLastNameTest">
                   </a> <!-- createContactWithLastNameTest -->
                   <span class="method-name">createContactWithLastNameTest</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="createContactWithLastNameTest">
-                  </a> <!-- createContactWithLastNameTest -->
-                  <span class="method-name">createContactWithLastNameTest</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="createContact_Support_DateTest">
-                  </a> <!-- createContact_Support_DateTest -->
-                  <span class="method-name">createContact_Support_DateTest</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -253,27 +237,19 @@
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">D:\wdwd\ComCast_CRM_Framework\testng_crossBrowser_Parallel2.xml</span>
+            <span class="header-content">D:\wdwd\ComCast_CRM_Framework\testng_Full_RegressionSuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
-&lt;suite parallel=&quot;tests&quot; name=&quot;Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
-  &lt;test thread-count=&quot;5&quot; parallel=&quot;tests&quot; name=&quot;Test-Runner-1-Chrome&quot;&gt;
-    &lt;parameter name=&quot;BROWSER&quot; value=&quot;chrome&quot;/&gt;
+&lt;suite name=&quot;Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.crm.comcast.organaizationtest.CreateOrganizationTest&quot;/&gt;
       &lt;class name=&quot;com.crm.comcast.conatctTest.CreateContactTest&quot;/&gt;
-    &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Test-Runner-1-Chrome --&gt;
-  &lt;test thread-count=&quot;5&quot; parallel=&quot;tests&quot; name=&quot;Test-Runner-2-Firefox&quot;&gt;
-    &lt;parameter name=&quot;BROWSER&quot; value=&quot;firefox&quot;/&gt;
-    &lt;classes&gt;
       &lt;class name=&quot;com.crm.comcast.organaizationtest.CreateOrganizationTest&quot;/&gt;
-      &lt;class name=&quot;com.crm.comcast.conatctTest.CreateContactTest&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Test-Runner-2-Firefox --&gt;
+  &lt;/test&gt; &lt;!-- Test --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -285,10 +261,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Test-Runner-1-Chrome (2 classes)</span>
-              </li>
-              <li>
-                <span class="test-name">Test-Runner-2-Firefox (2 classes)</span>
+                <span class="test-name">Test (2 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -342,52 +315,32 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(10);
+data.addRows(5);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'createConatctWithOrgTest')
 data.setCell(0, 2, 'com.crm.comcast.conatctTest.CreateContactTest')
-data.setCell(0, 3, 27509);
+data.setCell(0, 3, 24878);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'createConatctWithOrgTest')
-data.setCell(1, 2, 'com.crm.comcast.conatctTest.CreateContactTest')
-data.setCell(1, 3, 25592);
+data.setCell(1, 1, 'createOrganizationTest')
+data.setCell(1, 2, 'com.crm.comcast.organaizationtest.CreateOrganizationTest')
+data.setCell(1, 3, 9120);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'createOrganizationTest')
+data.setCell(2, 1, 'createOrganization_With_Industries_And_Type_Test')
 data.setCell(2, 2, 'com.crm.comcast.organaizationtest.CreateOrganizationTest')
-data.setCell(2, 3, 15582);
+data.setCell(2, 3, 8985);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'createOrganization_With_Industries_And_Type_Test')
-data.setCell(3, 2, 'com.crm.comcast.organaizationtest.CreateOrganizationTest')
-data.setCell(3, 3, 14809);
+data.setCell(3, 1, 'createContact_Support_DateTest')
+data.setCell(3, 2, 'com.crm.comcast.conatctTest.CreateContactTest')
+data.setCell(3, 3, 8868);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'createContact_Support_DateTest')
+data.setCell(4, 1, 'createContactWithLastNameTest')
 data.setCell(4, 2, 'com.crm.comcast.conatctTest.CreateContactTest')
-data.setCell(4, 3, 13729);
-data.setCell(5, 0, 5)
-data.setCell(5, 1, 'createContactWithLastNameTest')
-data.setCell(5, 2, 'com.crm.comcast.conatctTest.CreateContactTest')
-data.setCell(5, 3, 13611);
-data.setCell(6, 0, 6)
-data.setCell(6, 1, 'createOrganizationTest')
-data.setCell(6, 2, 'com.crm.comcast.organaizationtest.CreateOrganizationTest')
-data.setCell(6, 3, 13589);
-data.setCell(7, 0, 7)
-data.setCell(7, 1, 'createOrganization_With_Industries_And_Type_Test')
-data.setCell(7, 2, 'com.crm.comcast.organaizationtest.CreateOrganizationTest')
-data.setCell(7, 3, 13379);
-data.setCell(8, 0, 8)
-data.setCell(8, 1, 'createContact_Support_DateTest')
-data.setCell(8, 2, 'com.crm.comcast.conatctTest.CreateContactTest')
-data.setCell(8, 3, 12450);
-data.setCell(9, 0, 9)
-data.setCell(9, 1, 'createContactWithLastNameTest')
-data.setCell(9, 2, 'com.crm.comcast.conatctTest.CreateContactTest')
-data.setCell(9, 3, 12248);
+data.setCell(4, 3, 8533);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 2 minutes</span>
+              <span class="suite-total-time">Total running time: 1 minutes</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -402,17 +355,13 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">4 ignored methods</span>
+            <span class="header-content">2 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
-              <span class="ignored-class-name">com.crm.comcast.conatctTest.CreateContactTest</span>
+              <span class="ignored-class-name">com.crm.comcast.organaizationtest.CreateOrganizationTest</span>
               <div class="ignored-methods-div">
                 <span class="ignored-method-name">config_AS</span>
-                <br/>
-                <span class="ignored-method-name">config_AS</span>
-                <br/>
-                <span class="ignored-method-name">config_BS</span>
                 <br/>
                 <span class="ignored-method-name">config_BS</span>
                 <br/>
@@ -426,174 +375,98 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.crm.comcast.organaizationtest.CreateOrganizationTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.crm.comcast.conatctTest.CreateContactTest</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
                 <span class="method-name">config_BS</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="configuration-class before">
-                <span class="method-name">config_BC(firefox)</span>
-                <span class="method-start">420 ms</span>
-              </div> <!-- configuration-class before -->
-              <div class="configuration-class before">
-                <span class="method-name">config_BC(chrome)</span>
-                <span class="method-start">420 ms</span>
+                <span class="method-name">config_BC</span>
+                <span class="method-start">339 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-method before">
                 <span class="method-name">config_BM</span>
-                <span class="method-start">3155 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="configuration-method before">
-                <span class="method-name">config_BM</span>
-                <span class="method-start">7643 ms</span>
+                <span class="method-start">2567 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">createOrganizationTest</span>
-                <span class="method-start">9454 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">createOrganizationTest</span>
-                <span class="method-start">13666 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">config_AM</span>
-                <span class="method-start">25040 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">config_BM</span>
-                <span class="method-start">26715 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="configuration-method after">
-                <span class="method-name">config_AM</span>
-                <span class="method-start">27257 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">config_BM</span>
-                <span class="method-start">28753 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">createOrganization_With_Industries_And_Type_Test</span>
-                <span class="method-start">30403 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">createOrganization_With_Industries_And_Type_Test</span>
-                <span class="method-start">33233 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">config_AM</span>
-                <span class="method-start">45214 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method after">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">config_AM</span>
-                <span class="method-start">46614 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-class after">
-                <span class="method-name">config_AC</span>
-                <span class="method-start">46785 ms</span>
-              </div> <!-- configuration-class after -->
-              <div class="configuration-class after">
-                <span class="method-name">config_AC</span>
-                <span class="method-start">46916 ms</span>
-              </div> <!-- configuration-class after -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">com.crm.comcast.conatctTest.CreateContactTest</div> <!-- chronological-class-name -->
-              <div class="configuration-class before">
-                <span class="method-name">config_BC(firefox)</span>
-                <span class="method-start">46927 ms</span>
-              </div> <!-- configuration-class before -->
-              <div class="configuration-class before">
-                <span class="method-name">config_BC(chrome)</span>
-                <span class="method-start">47707 ms</span>
-              </div> <!-- configuration-class before -->
-              <div class="configuration-method before">
-                <span class="method-name">config_BM</span>
-                <span class="method-start">49340 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="configuration-method before">
-                <span class="method-name">config_BM</span>
-                <span class="method-start">53119 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
                 <span class="method-name">createConatctWithOrgTest</span>
-                <span class="method-start">55745 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">createConatctWithOrgTest</span>
-                <span class="method-start">59007 ms</span>
+                <span class="method-start">6094 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">config_AM</span>
-                <span class="method-start">83256 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method after">
-                <span class="method-name">config_AM</span>
-                <span class="method-start">84600 ms</span>
+                <span class="method-start">30981 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">config_BM</span>
-                <span class="method-start">84981 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="configuration-method before">
-                <span class="method-name">config_BM</span>
-                <span class="method-start">86329 ms</span>
+                <span class="method-start">32515 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">createContactWithLastNameTest</span>
-                <span class="method-start">88726 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">createContactWithLastNameTest</span>
-                <span class="method-start">91180 ms</span>
+                <span class="method-start">34980 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">config_AM</span>
-                <span class="method-start">102338 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method after">
-                <span class="method-name">config_AM</span>
-                <span class="method-start">103430 ms</span>
+                <span class="method-start">43514 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">config_BM</span>
-                <span class="method-start">103916 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="configuration-method before">
-                <span class="method-name">config_BM</span>
-                <span class="method-start">104954 ms</span>
+                <span class="method-start">44748 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">createContact_Support_DateTest</span>
-                <span class="method-start">107282 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">createContact_Support_DateTest</span>
-                <span class="method-start">108995 ms</span>
+                <span class="method-start">47262 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">config_AM</span>
-                <span class="method-start">121012 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method after">
-                <span class="method-name">config_AM</span>
-                <span class="method-start">121447 ms</span>
+                <span class="method-start">56132 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-class after">
                 <span class="method-name">config_AC</span>
-                <span class="method-start">122731 ms</span>
-              </div> <!-- configuration-class after -->
-              <div class="configuration-class after">
-                <span class="method-name">config_AC</span>
-                <span class="method-start">123064 ms</span>
+                <span class="method-start">57408 ms</span>
               </div> <!-- configuration-class after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.crm.comcast.organaizationtest.CreateOrganizationTest</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">config_BC</span>
+                <span class="method-start">58236 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-method before">
+                <span class="method-name">config_BM</span>
+                <span class="method-start">59744 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">createOrganizationTest</span>
+                <span class="method-start">63337 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">config_AM</span>
+                <span class="method-start">72458 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">config_BM</span>
+                <span class="method-start">73707 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">createOrganization_With_Industries_And_Type_Test</span>
+                <span class="method-start">76375 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">config_AM</span>
+                <span class="method-start">85362 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-class after">
+                <span class="method-name">config_AC</span>
+                <span class="method-start">86578 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.crm.comcast.conatctTest.CreateContactTest</div> <!-- chronological-class-name -->
               <div class="configuration-suite after">
                 <span class="method-name">config_AS</span>
-                <span class="method-start">124249 ms</span>
+                <span class="method-start">87465 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

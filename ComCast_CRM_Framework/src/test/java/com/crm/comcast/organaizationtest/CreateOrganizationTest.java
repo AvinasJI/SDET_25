@@ -17,7 +17,9 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.interactions.Actions;
+import org.testng.Assert;
 import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
 import org.testng.internal.annotations.BaseAnnotation;
 
 import com.crm.comcast.genericutility.BaseAnnotationClass;
@@ -58,11 +60,8 @@ public class CreateOrganizationTest extends BaseAnnotationClass{
          /* step 4 : verify */ 
               OrganizationInfoPage oip = new OrganizationInfoPage(driver);
               String orgNameInfoMsg =  oip.getOrganizationInfo().getText();
-              if(orgNameInfoMsg.contains(orgName)) {
-            	  System.out.println(orgName + "==>is created==>PASS");
-              }else {
-            	  System.out.println(orgName + "==>is not created==>fAIL");
-              }
+              boolean status = orgNameInfoMsg.contains(orgName);
+              Assert.assertTrue(status);
 	}
 	@Test(groups = {"regressionTest"})
 	public void  createOrganization_With_Industries_And_Type_Test() throws Throwable {
@@ -85,24 +84,16 @@ public class CreateOrganizationTest extends BaseAnnotationClass{
     /* step 4 : verify */ 
          OrganizationInfoPage oip = new OrganizationInfoPage(driver);
          String orgNameInfoMsg =  oip.getOrganizationInfo().getText();
-         if(orgNameInfoMsg.contains(orgName)) {
-       	  System.out.println(orgName + "==>is created==>PASS");
-         }else {
-       	  System.out.println(orgName + "==>is not created==>fAIL");
-         }
+         boolean status = orgNameInfoMsg.contains(orgName);
+         Assert.assertTrue(status);
          
+      SoftAssert soft = new SoftAssert();
         String actIndustriesinfo =  oip.getIndustriesInfo().getText();
-        if(actIndustriesinfo.equals(industries)) {
-         	  System.out.println(industries + "==>is verified==>PASS");
-           }else {
-         	  System.out.println(industries + "==>is not verified==>fAIL");
-           }
+        soft.assertEquals(actIndustriesinfo, industries, "indusries is not verified==FAIL");
+        
         String actTypeinfo =  oip.getTypeInfo().getText();
-        if(actTypeinfo.equals(type)) {
-       	  System.out.println(type + "==>is verified==>PASS");
-         }else {
-       	  System.out.println(type + "==>is not verified==>fAIL");
-         }
+        soft.assertEquals(actTypeinfo, type , " org type  is not verified==FAIL");
+       soft.assertAll();
 	}
 
 }

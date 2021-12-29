@@ -1,5 +1,6 @@
 package com.crm.comcast.conatctTest;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.crm.comcast.genericutility.BaseAnnotationClass;
@@ -40,11 +41,9 @@ public class CreateContactTest extends BaseAnnotationClass{
          /* step 4 : verify */ 
          ContactsInfoPage cip = new ContactsInfoPage(driver);
          String  actContactinfo = cip.getContactSucMsg().getText();
-         if(actContactinfo.contains(lastName)) {
-        	 System.out.println(actContactinfo + "==> is created==>PASS");
-         }else {
-        	 System.out.println(actContactinfo + "==> is not created==>Fail");
-         }
+         boolean status =  actContactinfo.contains(lastName);
+       	 Assert.assertTrue(status ,"Contact name is not verified==FAIL");
+        
 	}
 	
 	
@@ -69,12 +68,9 @@ public class CreateContactTest extends BaseAnnotationClass{
          /* step 4 : verify */ 
          ContactsInfoPage cip = new ContactsInfoPage(driver);
          String  actContactinfo = cip.getContactSucMsg().getText();
-         if(actContactinfo.contains(lastName)) {
-        	 System.out.println(actContactinfo + "==> is created==>PASS");
-         }else {
-        	 System.out.println(actContactinfo + "==> is not created==>Fail");
-
-         }
+         boolean status =  actContactinfo.contains(lastName);
+       	 Assert.assertTrue(status ,"Contact name is not verified==FAIL");
+        
 	}
 	
 	@Test(groups = {"regressionTest"})
@@ -91,7 +87,7 @@ public class CreateContactTest extends BaseAnnotationClass{
                 
    /* step 3 : navigate to create Org page */  
         OrganizationPage op = new OrganizationPage(driver);
-        op.getCreateOrganizationIMG().click();
+        op.getCreateOrganizationIMG();
                
    /* step 3 : create a new Org */   
         CreateOrganizationPage cop = new CreateOrganizationPage(driver);
@@ -114,13 +110,9 @@ public class CreateContactTest extends BaseAnnotationClass{
         /* step 8 : verify */ 
         ContactsInfoPage cip = new ContactsInfoPage(driver);
         String  actContactinfo = cip.getContactSucMsg().getText();
-        if(actContactinfo.contains(conactName)) {
-       	 System.out.println(conactName + "==> is created==>PASS");
-        }else {
-       	 System.out.println(conactName + "==> is not created==>Fail");
-
-        }
-
+       boolean status =  actContactinfo.contains(conactName);
+       	 Assert.assertTrue(status ,"Contact name is not verified==FAIL");
+        
 	}
 
 	

@@ -25,7 +25,7 @@ public class BaseAnnotationClass {
 	public ExcelUtility eLib = new ExcelUtility();
 	public DataBaseUtilities dLib = new DataBaseUtilities();
 	public WebDriver driver = null;
-    
+	public static  WebDriver sdriver = null;
     
     @BeforeSuite(groups = {"smokeTest","regressionTest"})
     public void config_BS() throws Throwable {
@@ -33,24 +33,27 @@ public class BaseAnnotationClass {
     	dLib.connectToDB();
     }
     
-    @Parameters("BROWSER")
+  //  @Parameters("BROWSER")
     @BeforeClass(groups = {"smokeTest","regressionTest"})
-    public void config_BC(String BROWSER) throws Throwable {
+    public void config_BC() throws Throwable {
 		/* read common data from Properties File*/
-		// String BROWSER = fLib.getPropertyKeyValue("browser");
+		 String BROWSER = fLib.getPropertyKeyValue("browser");
     	
          /* launch the Browser */ 
 	    	System.out.println("======launch the BROWSER===========");
 
          if(BROWSER.equals("chrome")) {
-              driver = new ChromeDriver();
+               driver = new ChromeDriver();
          }else if(BROWSER.equals("firefox")){
-        	  driver = new FirefoxDriver();
+        	   driver = new FirefoxDriver();
          }else if(BROWSER.equals("ie")){
-       	  driver = new InternetExplorerDriver();
+        	  driver = new InternetExplorerDriver();
         }else {
-            driver = new ChromeDriver();
+        	 driver = new ChromeDriver();
         }
+         
+         sdriver = driver;
+         
          wLib.waitForPageToLoad(driver);
          
 
